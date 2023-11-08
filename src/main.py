@@ -9,4 +9,17 @@ app = Flask(__name__)
 def index():
     return render_template('index.html')
 
+
+@app.route('/sync')
+def sync():
+    return "File Synchronizer"
+
+@app.route('/fsearcher')
+def file_searcher():
+    return "File Searcher"
+
+@app.route('/dsearcher')
+def duplicate_searcher():
+    return "Duplicate Searcher"
+
 app.run(host='0.0.0.0', port=5000)

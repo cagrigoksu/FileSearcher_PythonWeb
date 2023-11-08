@@ -1,1 +1,36 @@
-Hello world!
+<!doctype html>
+<html>
+  <head>
+    <title>File Searcher</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css')}}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap" rel="stylesheet">
+  </head>
+   <body>
+
+    <div>
+        <div style="padding-top: 5%;">
+            <p class="title">File Searcher</p>
+        </div>
+
+        <div class="div_selection">
+
+            <label for="sync" class="selection_labels">
+                File Sync
+            </label>
+            <label for="fsearcher" class="selection_labels">
+                File Searcher
+            </label>
+            <label for="dsearcher" class="selection_labels">
+                Duplicate Searcher
+            </label>
+            <input hidden id="sync" type="button" value="Click me" onclick="window.location.href='{{ url_for('sync')}}';">
+            <input hidden id="fsearcher" type="button" value="Click me" onclick="window.location.href='{{ url_for('file_searcher')}}';">
+            <input hidden id="dsearcher" type="button" value="Click me" onclick="window.location.href='{{ url_for('duplicate_searcher')}}';">
+
+        </div>
+    </div>
+
+  </body>
+</html>
